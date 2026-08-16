@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121;color:white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">WednesDay</div>
+        <div class="day">ThrusDay</div>
+    </div>
+    
+</body>
+<script>
+    const parent=document.querySelector(".parent");
+    console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+        
+    }
+    //note1-->
+    //.children-->return HTML collection
+
+
+    //setting some style 
+    parent.children[1].style="color:orange";
+
+    //.firstElementChild--->return first child or any element;
+    const dayOne=parent.firstElementChild;
+    console.log(dayOne);
+    //.lastElementChild--->return last child of element, child--->not children
+   const dayLast=parent.lastElementChild;
+
+   // Also access parent with children
+   //.parentElement-->return parent ,contain everything inside parent
+   console.log(dayLast.parentElement);
+
+   //.nextElementSibling-->return next sibling of element
+   console.log(dayOne.nextElementSibling);
+
+
+   //nodeList
+   console.log(parent.childNodes);
+   //note2-->nodelist contain -->all div ,text and every enter
+   //style="key1:value;key2:value;"--->for seperating two key values --->use semicolon
+   //to seperate key and value-->use colon
+   
+   
+
+   
+    
+    
+    
+</script>
+</html>
