@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const div=document.createElement('div');
+    //note1-->
+    //setting id and class with help of .(dot) 
+    div.className=".first-div";
+    div.id=Math.floor(Math.random()*10+1);
+    console.log(div);
+    
+
+    //we can use these functonaly also i.e, key,value pair 
+    div.setAttribute("title","welcome js");
+    
+    //setting some style 
+    div.style.backgroundColor="greeen";
+    //TO WRITE TEXT INSIDE DIV
+    div.innerText="hello and welcome to js with first move on element creation    ";
+    //OR WE CAN USE 
+    const addText=document.createTextNode("chai aaur code");
+    div.appendChild(addText);
+
+
+    //to attach on document
+    //THIS IS MAIN PART
+    //LAST ME ELEMENT KO-->BODY ME APPEND KARNA PADTA H 
+    document.body.appendChild(div);
+
+
+</script>
+</html>
