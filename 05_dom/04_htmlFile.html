@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code|DOM</title>
+</head>
+<body style="background-color:#212121;color:white">
+    <div >
+        <ul class="parent-div">
+            <li>javaScript</li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    //FIRST METHOD TO ADD 
+    function addLangName(lang){
+        //here li--->written in inveerted coma ,if you dont write then li -->will  not created
+        Li=document.createElement('li');
+        Li.innerHTML=lang;
+        document.querySelector('.parent-div').appendChild(Li);
+    }
+    addLangName('python');
+    //SECOND METHOD TO ADD
+    function addOptimize(lang){
+        //first created li
+    let li=document.createElement('li');
+        //created text note
+        const textNote=document.createTextNode(lang);
+        //appended text note to li 
+        li.appendChild(textNote);
+        //appended li to ul or class =.parent-div
+        document.querySelector('.parent-div').appendChild(li);
+
+    }
+    //call karte time -->call in inverted coma '';
+    addOptimize('typescript');
+
+    //EDITING
+    //METHOD 1
+    //selecting -->2nd list item 
+    const secondLang=document.querySelector("li:nth-child(2)");//selected second li 
+    //creating li and adding text to it 
+    const newLi=document.createElement('li');
+    newLi.textContent="mojo";
+    //replacing text of secondlang with text of newLi
+
+    secondLang.replaceWith(newLi);
+
+    //METHOD 2
+    const lastLi=document.querySelector("li:last-child");
+    lastLi.outerHTML="<li>c++</li>";
+
+    //Remove
+    const firstLi=document.querySelector('li:first-child');
+    firstLi.remove();
+
+
+
+
+//note1-->
+//LEARN ELEMENT CREATION AND TEXT WRITING INSIDE--3 METHODS
+//LEARN EDITING--->2 INSIDE--3 METHODS
+//LEARN REMOVIND ELEMENT--1 METHOD 
+
+</script>
+
+</html>
